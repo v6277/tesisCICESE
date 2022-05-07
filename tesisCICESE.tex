@@ -1,0 +1,254 @@
+% La compilacion se debe hacer con la instruccion de PdfLatex
+% para evitar problemas de tamaño de hoja.
+% Todos los archivos de figuras deben estar en formato PDF.
+% Al momento de imprimir el documento, se debe hacer sin escala de pagina.
+\documentclass[letterpaper,11pt]{cicese}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{marvosym}
+\usepackage[letterpaper,left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+%uso de acentos directamente en el codigo de LaTeX, sin barra
+%\usepackage[ansinew]{inputenc}  
+%\usepackage[T1]{fontenc}
+%\usepackage[spanish,english]{babel}
+%\usepackage[spanish,mexico,es-lcroman]{babel}
+%paquete para insertar hipervinculos en referencias a capitulos, figuras, etc.
+%\usepackage{arev}
+%uso de fuente por defecto de LaTeX para las ecuaciones
+%\usepackage{newtxmath} 
+\usepackage{amsmath}
+\renewcommand{\familydefault}{\sfdefault} 
+\usepackage[spanish, mexico,es-lcroman]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{mdframed}
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\usepackage[linkcolor=blue]{hyperref}
+\usepackage{cicese}
+\usepackage{tabularx}
+\usepackage{pbox}
+\usepackage{makeidx}
+\usepackage{eurosym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{graphicx} % figuras
+\graphicspath{{figures//}}
+\usepackage{emptypage} 
+\usepackage{textcomp}
+\usepackage{physics}
+
+%\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\DeclareMathAlphabet{\mathantt}{OT1}{antt}{li}{it}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\setlength{\parskip}{12pt plus 1pt minus 1pt}
+
+
+% Paquete para pseudocodigo o algoritmos
+%\usepackage[lined,boxed,boxruled,linesnumbered,spanish]{algorithm2e}
+% Paquete para las graficas
+\usepackage{float}
+% Paquete para las enumeraciones
+\usepackage{enumerate}
+% Paquete para pseudocodigo o algoritmos
+%este es el que venía:
+%\usepackage[lined,boxed,boxruled,linesnumbered,spanish]{algorithm2e}
+
+\usepackage{titlesec}
+%\titleformat{\chapter}[display]
+%  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{16pt}{\Huge}
+
+  \titleformat{\chapter} % command
+	[hang] % shape
+	{\normalfont\bfseries\Large} % format
+	%{\chaptertitlename\ \thechapter .} % label
+	{\ifnum\pdfstrcmp{\chaptertitlename}{Cap\'itulo}=0  
+			\chaptertitlename\ \thechapter .
+		\fi
+	} % label
+	{
+	16pt
+	} % sep
+	{
+	%    \rule{\textwidth}{1pt}	
+	%    \vspace{1ex}
+	%    \centering
+	} % before-code
+	[
+		\vspace{-2ex}%
+	  %\rule{\textwidth}{0.3pt}
+  ] % after-code
+
+
+%\titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+\titlespacing\chapter{0pt}{-40.25pt plus 1pt minus 2pt}{12pt plus 2pt minus 2pt}
+\titlespacing\section{0pt}{6pt plus 5pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsection{1pt}{6pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{6pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+  	
+% Paquete para estilizar los captions de tablas e imagenes
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=normalfont,md,up,justification=justified,labelsep=period]{caption}
+\captionsetup{labelfont=bf}
+
+% Para cambiar el color de fondo de una celda en una tabla
+\usepackage[table]{xcolor}	
+% Para rotar una tabla
+\usepackage{rotating}
+%\usepackage{subfig}
+\usepackage{subfigure} % subfiguras
+% Asignar espacio personalizado
+\usepackage{setspace}
+% Para hacer tablas de multiples páginas
+\usepackage{longtable}
+% Para utilizar multiples renglones en tablas
+\usepackage{multirow}
+\usepackage{booktabs}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%para agregar teoremas, etc
+\newtheorem{theorem}{Teorema}[chapter]
+\newenvironment{proof}{\noindent{\bf Demostraci\'on.}}{\hfill$\blacksquare$} 
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{teo}{Teorema}[chapter]
+\newtheorem{obs}{Observaci\'on}[chapter]
+\setcounter{MaxMatrixCols}{10}
+
+\input{tcilatex}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\begin{document}
+
+% Escribe tu nombre, tal y como aparece en los registros
+% de Posgrado. De ser necesario, separa con \- las sílabas
+% de tu nombre
+\autor{Nombre completo del estudiante}
+
+% Escribe el título de tu tesis 
+\titulo{Título prüéba de la tesis}
+%Si el titulo es mayor de 2 renglones es necesario cambiar el valor de espacio vertical 
+% para que conserve las dimensiones del margen.
+% (\dos) indica que el titulo es de dos renglos en caso de que sean tres 
+% usar (\tres)
+\dos
+
+% Para el resumen, escribe aqui el título en inglés
+\tituloIN{Title of thesis}
+
+% Aquí va el nombre de tu programa de posgrado
+\posgrado{nombre del posgrado}
+\posgradoUP{NOMBRE DEL POSGRADO MAYUSCULAS}
+% Aquí va el nombre de orientacion para el que aplique (sino comentarlo)
+\orientacion{ con orientaci\'on en ...}
+
+% Escribe aquí el nombre del posgrado en inglés
+\posgradoIN{Name of the Degree}
+% Escribe aquí el nombre de orientacion para el que aplique (sino comentarlo)
+\orientacionIN{ with orientation in ...}
+
+% Este comando especifica si la tesis es de maestria (usa \mc) o de
+% doctorado (usa \dc)
+\mc
+
+% Fecha (mes y año) de la defensa de tesis, en español y en ingles
+\fechaexamen{mes, a\~no}\fechaexamenIN{month, year}
+
+% Fecha (dia, mes y año) de la defensa de tesis para la hoja de firmas
+\fechaexamencompleta{mes, a\~no}
+
+% Año de la defensa //Este valor a aparecerá en la parte inferior de la primer página de la tesis
+\anioDefensa{año de defensa}
+
+% Nombre de tu director de tesis, si tienes codirector repite el comando
+\director{Dr./Dra. Xxxx Xxxx Xxxx}
+%\director{Dr./Dra. Xxxx Xxxx Xxxx}
+
+% Nombres de los sinodales, en el orden que aparecerán en la
+% página de firmas
+%%NO UTILIZAR ABREVIATURAS
+\sinodal{Dr./Dra. Xxxx Xxxx Xxxx}
+\sinodal{Dr./Dra. Xxxx Xxxx Xxxx}
+\sinodal{Dr./Dra. Xxxx Xxxx Xxxx}
+%\sinodal{Dr. 4}
+%\sinodal{Dr. 5}
+%\sinodal{Dr. 6}
+
+% Para mostrar el logotipo de su programa, elimine el simbolo de comentario del nombre del posgrado correspondiente
+%\logotipo{0} %% Ciencias de la vida
+%\logotipo{1} %% Acuicultura
+%\logotipo{2} %% Ecologia marina
+%\logotipo{3} %% Oceanografia marina
+%\logotipo{4} %% Ciencias de la computacion
+%\logotipo{5} %% Electronica y telecomunicaciones
+%\logotipo{6} %% Optica
+%\logotipo{7} %% Ciencias de la tierra
+\logotipo{8} %% Nanociencias
+%\logotipo{9} %% Tecnologias avanzadas e integradas
+% Nombre del Coordinador del Programa de Posgrado
+\cpp{Dr./Dra. Xxxx Xxxx Xxxx}
+
+% Nombre del Director de Estudios de Posgrado
+\dirposgrado{Dr. Pedro Negrete Regagnon}
+% Escribe aqui el nombre del archivo .tex que contiene el texto del
+% resumen en español. Omite escribir la extensión .tex
+\resumenES{Resumen}
+
+% Palabras clave del resumen en español
+\palabrasclave{pc1, pc2, ..., pc5}
+
+% Escribe aqui el nombre del archivo .tex que contiene el texto del
+% resumen en inglés. Omite escribir la extensión .tex
+\resumenIN{Abstract}
+
+% Palabras clave del resumen en inglés
+\keywords{k1, k2, ..., k5}
+
+% Nombre del archivo .tex con el texto de la dedicatoria, omite
+% la extensión .tex
+\dedicatoria{Dedicatoria}
+
+% Nombre del archivo .tex con el texto de los agradecimientos, omite
+% la extensión .tex
+\agradecimientos{Agradecimientos}
+
+% Este comando crea todas las páginas preliminares de la tesis
+\preliminares
+
+{\normalsize
+\input{Capitulo01.tex}
+\newpage }
+
+{\normalsize
+\input{Capitulo02.tex}
+\newpage }
+
+{\normalsize
+\input{Capitulo03.tex}
+\newpage }
+
+{\normalsize
+\input{Capitulo04.tex}
+\newpage }
+
+{\normalsize
+\input{Capitulo05.tex}
+\newpage }
+
+
+\linespread{1.0}
+\addcontentsline{toc}{chapter}{\normalsize\expandafter{Literatura citada} \protect\texorpdfstring{\normalfont\protect\dotfill}{}}
+{\normalsize
+\bibliographystyle{cicese} 
+\nocite{*}
+\bibliography{literaturaTesis}
+}
+
+\linespread{1.5}
+{\normalsize
+\input{Anexo.tex}
+\newpage }
+
+\end{document}
