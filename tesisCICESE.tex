@@ -32,7 +32,7 @@
 \usepackage{amsmath}
 \usepackage{gensymb}
 \usepackage{graphicx} % figuras
-\graphicspath{{figures//}}
+\graphicspath{{figuras//}}
 \usepackage{emptypage} 
 \usepackage{textcomp}
 \usepackage{physics}
@@ -194,47 +194,47 @@
 \dirposgrado{Dr. Pedro Negrete Regagnon}
 % Escribe aqui el nombre del archivo .tex que contiene el texto del
 % resumen en español. Omite escribir la extensión .tex
-\resumenES{Resumen}
+\resumenES{secciones/Resumen}
 
 % Palabras clave del resumen en español
 \palabrasclave{pc1, pc2, ..., pc5}
 
 % Escribe aqui el nombre del archivo .tex que contiene el texto del
 % resumen en inglés. Omite escribir la extensión .tex
-\resumenIN{Abstract}
+\resumenIN{secciones/Abstract}
 
 % Palabras clave del resumen en inglés
 \keywords{k1, k2, ..., k5}
 
 % Nombre del archivo .tex con el texto de la dedicatoria, omite
 % la extensión .tex
-\dedicatoria{Dedicatoria}
+\dedicatoria{secciones/Dedicatoria}
 
 % Nombre del archivo .tex con el texto de los agradecimientos, omite
 % la extensión .tex
-\agradecimientos{Agradecimientos}
+\agradecimientos{secciones/Agradecimientos}
 
 % Este comando crea todas las páginas preliminares de la tesis
 \preliminares
 
 {\normalsize
-\input{Capitulo01.tex}
+\input{secciones/Capitulo01.tex}
 \newpage }
 
 {\normalsize
-\input{Capitulo02.tex}
+\input{secciones/Capitulo02.tex}
 \newpage }
 
 {\normalsize
-\input{Capitulo03.tex}
+\input{secciones/Capitulo03.tex}
 \newpage }
 
 {\normalsize
-\input{Capitulo04.tex}
+\input{secciones/Capitulo04.tex}
 \newpage }
 
 {\normalsize
-\input{Capitulo05.tex}
+\input{secciones/Capitulo05.tex}
 \newpage }
 
 
@@ -243,12 +243,12 @@
 {\normalsize
 \bibliographystyle{cicese} 
 \nocite{*}
-\bibliography{literaturaTesis}
+\bibliography{secciones/literaturaTesis}
 }
 
 \linespread{1.5}
 {\normalsize
-\input{Anexo.tex}
+\input{secciones/Anexo.tex}
 \newpage }
 
 \end{document}
