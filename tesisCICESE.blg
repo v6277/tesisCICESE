@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: tesisCICESE.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: cicese.bst
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Database file #1: literaturaTesis.bib
+Warning--empty publisher in APAAmericanPsychiatricAssociation2019
+Warning--empty publisher in FAOFoodandAgricultureOrganization2012
+Warning--can't use both author and editor fields in NationalResearchCouncilandInstituteofMedicin2005
+You've used 22 entries,
+            2783 wiz_defined-function locations,
+            899 strings with 10824 characters,
+and the built_in function-call counts, 9397 in all, are:
+= -- 913
+> -- 483
+< -- 31
++ -- 138
+- -- 138
+* -- 819
+:= -- 1463
+add.period$ -- 82
+call.type$ -- 22
+change.case$ -- 120
+chr.to.int$ -- 31
+cite$ -- 69
+duplicate$ -- 405
+empty$ -- 648
+format.name$ -- 168
+if$ -- 1960
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 22
+newline$ -- 124
+num.names$ -- 93
+pop$ -- 195
+preamble$ -- 1
+purify$ -- 89
+quote$ -- 0
+skip$ -- 353
+stack$ -- 0
+substring$ -- 294
+swap$ -- 133
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 177
+warning$ -- 3
+while$ -- 93
+width$ -- 0
+write$ -- 318
+(There were 3 warnings)
