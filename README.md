@@ -20,7 +20,7 @@ NOTA: se les pide a futuras generaciones, que mantengan actualizado esta plantil
 | DC | Claudia Ivette García Gil |
 | Biblioteca | Alma Lilia Nuñuez Rodríguez |
 | Biblioteca | Oscar Peña Ramírez |
-| MC Nanociencas | Victor Hugo Medina Macias |
+| MC Nanociencias | Victor Hugo Medina Macias |
   
 
 ## Instrucciones de uso
